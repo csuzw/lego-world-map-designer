@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Lego World Map Designer</title>
+        <meta name="description" content="Designer for Lego World Map (31203)">
+        <meta name="author" content="rjc">
+
+        <link rel="stylesheet" href="lmp.css">
+    </head>
+
+    <body>
+
+        <header>
+            <div id="color-choices">
+                <button id="white" class="color-button white">1</button>
+                <button id="dark-blue" class="color-button dark-blue">2</button>
+                <button id="medium-azure" class="color-button medium-azure">3</button>
+                <button id="dark-turquoise" class="color-button dark-turquoise">4</button>
+                <button id="bright-green" class="color-button bright-green">5</button>
+                <button id="lime" class="color-button lime">6</button>
+                <button id="tan" class="color-button tan">7</button>
+                <button id="bright-light-orange" class="color-button bright-light-orange">8</button>
+                <button id="orange" class="color-button orange">9</button>
+                <button id="coral" class="color-button coral">10</button>
+                <button id="clear-cell" class="color-button clear-cell"></button>
+                <button id="fill" class="action-button">FILL</button>
+                <button id="clear" class="action-button">CLEAR</button>
+            </div>
+        </header>
+
+        <main>
+            <!--<svg id=canvas></svg>-->
+            <div id="canvas"></div>
+
+            <div id="color-counters">
+                <div class="white" data-max="3064"></div>
+                <div class="dark-blue" data-max="393"></div>
+                <div class="medium-azure" data-max="1607"></div>
+                <div class="dark-turquoise" data-max="1879"></div>
+                <div class="bright-green" data-max="601"></div>
+                <div class="lime" data-max="1060"></div>
+                <div class="tan" data-max="725"></div>
+                <div class="bright-light-orange" data-max="599"></div>
+                <div class="orange" data-max="601"></div>
+                <div class="coral" data-max="601"></div>
+            </div>
+        </main>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+        <script src="lmp.js"></script>
+    </body>
+</html>
+
+
