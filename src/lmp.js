@@ -1,4 +1,3 @@
-// Global Selected Color Variable
 var selectedColor = "";
 
 const world = [
@@ -34,8 +33,7 @@ const colors = [
     "coral"
 ];
 
-// Insert Grid Cells
-function addCells() {
+function initCells() {
     var counter = 0;
     while (counter < 10240) { // 128 x 80
         let x = counter % 128;
@@ -49,18 +47,25 @@ function addCells() {
     setCounters();
 }
 
-addCells();
+initCells();
 
-$("#color-choices")
+$("#map-controls")
     .children(".color-button")
     .click(function () {
         setSelectedColor($(this).attr("id"),  $(this));
     });
 
+$("#map-type")
+    .change(function() {
+        let value = $(this).val();
+    });
+
 $(".cell").click(function () {
     if (!selectedColor) return;
-    $(this).attr("class",  `cell ${selectedColor}`);
-    setCounters();
+    if (canChange($(this))) {
+        $(this).attr("class",  `cell ${selectedColor}`);
+        setCounters();
+    }
 });
 
 $("#clear").click(function () {
@@ -75,71 +80,37 @@ $("#clear").click(function () {
 $("#fill").click(function () {
     if (!selectedColor) return;
     $(".cell").each(function() {
-        let type = $(this).data("type");
-        if (type === "water") {
+        if (canChange($(this))) {
             $(this).attr("class",  `cell ${selectedColor}`);
         }
     });
     setCounters();
 });
 
+function canChange(element) {
+    let type = element.data("type");
+    isLandLocked = $("#lock-land").is(":checked");
+    isWaterLocked = $("#lock-water").is(":checked");
+    return (!isWaterLocked && type === "water") || (!isLandLocked && type === "land");
+}
+
 function setSelectedColor(colorClass,  element) {
     selectedColor = colorClass;
-    $("#color-choices").children().removeClass("selected");
+    $("#map-controls").children(".color-button").removeClass("selected");
     if (selectedColor) {
         element.addClass("selected");
         $("#fill").attr("class",  `action-button ${colorClass}`);
-        //setCursor(colorClass);
     }
     else {
         $("#fill").attr("class",  "action-button");
-        //document.body.style.cursor = "default";
     }
 }
 
 function setCounters() {
-    $("#color-counters div").each(function() {
+    $("#map-counters div").each(function() {
         let color = $(this).attr("class");
         let max = $(this).data("max");
         let count = $(`.cell.${color}`).length;
         $(this).html(`${count}/${max}`);
     });
 }
-
-// const colors = {
-//     "white": "white", 
-//     "dark-blue": "#0a3463", 
-//     "medium-azure": "#36aebf", 
-//     "dark-turquoise": "#008f9b", 
-//     "bright-green": "#4b9f4a", 
-//     "lime": "#bbe90b", 
-//     "tan": "#e4cd9e", 
-//     "bright-light-orange": "#f8bb3d", 
-//     "orange": "#fe8a18", 
-//     "coral": "#ff698f", 
-//     "clear-cell": "black", 
-// }
-
-// function setCursor(colorClass) {
-
-//     // create off-screen canvas
-//     var cursor = document.createElement('canvas'), 
-//         ctx = cursor.getContext('2d');
-
-//     cursor.width = 16;
-//     cursor.height = 16;
-
-//     // draw some shape for sake of demo
-//     ctx.strokeStyle = colors[colorClass];
-
-//     ctx.lineWidth = 2;
-//     ctx.moveTo(2,  10);
-//     ctx.lineTo(2,  2);
-//     ctx.lineTo(10,  2);
-//     ctx.moveTo(2,  2);
-//     ctx.lineTo(30,  30)    
-//     ctx.stroke();
-
-//     // set image as cursor (modern browsers can take PNGs as cursor).
-//     document.body.style.cursor = 'url(' + cursor.toDataURL() + '),  auto';
-// }
