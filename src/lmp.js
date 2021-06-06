@@ -32,6 +32,18 @@ function initCells() {
 
 initCells();
 
+var leftMouseButtonOnlyDown = false;
+
+function setLeftButtonState(e) {
+  leftMouseButtonOnlyDown = e.buttons === undefined 
+    ? e.which === 1 
+    : e.buttons === 1;
+}
+
+document.body.onmousedown = setLeftButtonState;
+document.body.onmousemove = setLeftButtonState;
+document.body.onmouseup = setLeftButtonState;
+
 $("#map-controls")
     .children(".color-button")
     .click(function () {
@@ -40,6 +52,14 @@ $("#map-controls")
 
 $(".cell").click(function () {
     if (!selectedColor) return;
+    if (canChange($(this))) {
+        $(this).attr("class",  `cell ${selectedColor}`);
+        setCounters();
+    }
+});
+
+$(".cell").mouseover(function () {
+    if (!leftMouseButtonOnlyDown || !selectedColor) return;
     if (canChange($(this))) {
         $(this).attr("class",  `cell ${selectedColor}`);
         setCounters();
