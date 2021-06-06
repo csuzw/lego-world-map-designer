@@ -78,7 +78,7 @@ button {
 }
 
 .action-button {
-  width: 96px;
+  width: 128px;
   background: white;
   color: black;
 }
@@ -204,6 +204,10 @@ button:hover {
   grid-auto-flow: column;
   grid-template-rows: 24px 24px;
   color: white;
+}
+
+#download {
+  grid-column-start: 15;
 }
 
 #lock-row-1 {
