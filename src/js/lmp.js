@@ -2,16 +2,18 @@ var selectedColor = "";
 var leftMouseButtonOnlyDown = false;
 
 function initLegoWorldMapDesigner() {
-    initMap();
+    initMap(0);
     initEvents();
     setCounters();
 }
 
-function initMap() {
+function initMap(mapType) {
+    $(".cell").remove();
+
     var counter = 0;
     while (counter < 10240) {
         // 128 x 80
-        let x = counter % 128;
+        let x = (counter + mapType) % 128;
         let y = (counter / 128) >> 0;
         let colorIndex =
             y < world.length && x < world[y].length ? world[y][x] : 0;
@@ -22,6 +24,22 @@ function initMap() {
         );
         counter++;
     }
+
+    $(".cell").click(function () {
+        if (!selectedColor) return;
+        if (isCellUnlocked($(this))) {
+            $(this).attr("class", `cell ${selectedColor}`);
+            setCounters();
+        }
+    });
+
+    $(".cell").mouseover(function () {
+        if (!leftMouseButtonOnlyDown || !selectedColor) return;
+        if (isCellUnlocked($(this))) {
+            $(this).attr("class", `cell ${selectedColor}`);
+            setCounters();
+        }
+    });
 }
 
 function initEvents() {
@@ -64,20 +82,20 @@ function initEvents() {
         });
     });
 
-    $(".cell").click(function () {
-        if (!selectedColor) return;
-        if (isCellUnlocked($(this))) {
-            $(this).attr("class", `cell ${selectedColor}`);
-            setCounters();
+    $("#map-counter-toggle").click(function () {
+        $(".map-counter").attr("hidden", function (_, attr) {
+            return !attr;
+        });
+        if ($(this).text() === "HIDE") {
+            $(this).text("SHOW");
+        } else {
+            $(this).text("HIDE");
         }
     });
 
-    $(".cell").mouseover(function () {
-        if (!leftMouseButtonOnlyDown || !selectedColor) return;
-        if (isCellUnlocked($(this))) {
-            $(this).attr("class", `cell ${selectedColor}`);
-            setCounters();
-        }
+    $("#map-type").change(function () {
+        let mapType = parseInt($(this).val());
+        initMap(mapType);
     });
 }
 

@@ -32,15 +32,15 @@ header {
 }
 
 #map-type {
-    position: absolute;
+    position: fixed;
     top: 8px;
     right: 16px;
 }
 
 #map-counters {
     width: 96px;
-    position: absolute;
-    top: 64px;
+    position: fixed;
+    top: 32px;
     right: 16px;
 }
 
@@ -81,6 +81,12 @@ button {
     width: 128px;
     background: white;
     color: black;
+}
+
+.map-counter-toggle {
+    width: 96px;
+    height: 24px;
+    border-radius: 12px 12px 0px 0px;
 }
 
 button:hover {
