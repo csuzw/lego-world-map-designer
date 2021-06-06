@@ -35,12 +35,14 @@ header {
     position: fixed;
     top: 8px;
     right: 16px;
+    font-weight: bold;
+    font-size: large;
 }
 
 #map-counters {
     width: 96px;
     position: fixed;
-    top: 32px;
+    top: 36px;
     right: 16px;
 }
 
