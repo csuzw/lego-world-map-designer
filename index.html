@@ -13,7 +13,7 @@
     <body>
 
         <header>
-            <div id="color-choices">
+            <div id="map-controls">
                 <button id="white" class="color-button white">1</button>
                 <button id="dark-blue" class="color-button dark-blue">2</button>
                 <button id="medium-azure" class="color-button medium-azure">3</button>
@@ -27,14 +27,30 @@
                 <button id="clear-cell" class="color-button clear-cell"></button>
                 <button id="fill" class="action-button">FILL</button>
                 <button id="clear" class="action-button">CLEAR</button>
+                <div id="lock">
+                    <div id="lock-row-1">
+                        <label for="lock-land">Lock Land</label>
+                        <input id="lock-land" type="checkbox" checked>
+                    </div>
+                    <div id="lock-row-2">
+                        <label id="lock-water-label" for="lock-water">Lock Water</label>
+                        <input id="lock-water" type="checkbox">
+                    </div>    
+                </div>
             </div>
+
+            <select id="map-type">
+                <option value="1">Europe and Africa</option>
+                <option value="2">Americas</option>
+                <option value="3">Asia and Australia</option>
+            </select>
         </header>
 
         <main>
             <!--<svg id=canvas></svg>-->
             <div id="canvas"></div>
 
-            <div id="color-counters">
+            <div id="map-counters">
                 <div class="white" data-max="3064"></div>
                 <div class="dark-blue" data-max="393"></div>
                 <div class="medium-azure" data-max="1607"></div>
