@@ -4,7 +4,6 @@ var leftMouseButtonOnlyDown = false;
 function initLegoWorldMapDesigner() {
     initMap(0);
     initEvents();
-    setCounters();
 }
 
 function initMap(mapType) {
@@ -40,6 +39,7 @@ function initMap(mapType) {
             setCounters();
         }
     });
+    setCounters();
 }
 
 function initEvents() {
@@ -126,8 +126,8 @@ function setSelectedColor(colorClass, element) {
 }
 
 function setCounters() {
-    $("#map-counters div").each(function () {
-        let color = $(this).attr("class");
+    $(".map-counter").each(function () {
+        let color = $(this).data("color");
         let max = $(this).data("max");
         let count = $(`.cell.${color}`).length;
         $(this).html(`${count}/${max}`);
