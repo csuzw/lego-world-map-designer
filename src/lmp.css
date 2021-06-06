@@ -1,0 +1,139 @@
+body {
+  margin: 0px;
+  font-family: sans-serif;
+  background: black;
+}
+
+header {
+  padding-top: 1px;
+}
+
+#canvas {
+  width: 1280px;
+  height: 800px;
+  margin: auto;
+  background-color: black;
+  border-color: white;
+  border-width: 8px;
+  border-style: solid;
+}
+
+.cell {
+  float: left;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 100%;
+}
+
+#color-counters {
+  width: 96px;
+  position: absolute;
+  top: 64px;
+  right: 16px;
+}
+
+#color-counters div {
+  width: 96px;
+  height: 48px;
+  line-height: 48px;
+  font-weight: bold;
+  font-size: large;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#color-choices {
+  width: 830px;
+  height: 48px;
+  margin: 8px auto;
+}
+
+button {
+  font-weight: bold;
+  font-size: large;
+  height: 48px;
+  padding: 0px;
+  box-sizing: border-box;
+  border-width: 2px;
+  border-color: white;
+  border-radius: 24px;
+}
+
+.color-button {
+  width: 48px;
+  float: left;
+}
+
+.action-button {
+  width: 96px;
+  background: white;
+  color: black;
+  margin-left: 4px;
+}
+
+.action-button:hover {
+  background: #f2f2f2;
+}
+
+.selected {
+  border: 2px solid gold;
+}
+
+.white {
+  background: white;
+  color: black;
+}
+
+.dark-blue {
+  background: #0A3463;
+  color: #f5cb9c;
+}
+
+.medium-azure {
+  background: #36AEBF;
+  color: #bf4736;
+}
+
+.dark-turquoise {
+  background: #008F9B;
+  color: #9b0b00;
+}
+
+.bright-green {
+  background: #4B9F4A;
+  color: #9e499f;
+}
+
+.lime {
+  background: #BBE90B;
+  color: #380ae9;
+}
+
+.tan {
+  background: #E4CD9E;
+  color: #1b3261;
+}
+
+.bright-light-orange {
+  background: #F8BB3D;
+  color: #3c79f8;
+}
+
+.orange {
+  background: #FE8A18;
+  color: #188cfe;
+}
+
+.coral {
+  background: #FF698F;
+  color: #68ffd9;
+}
+
+.clear-cell {
+  background: black;
+  color: white;
+}
