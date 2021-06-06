@@ -13,7 +13,7 @@ header {
   height: 800px;
   margin: auto;
   background-color: black;
-  border-color: white;
+  border-color: lightgray;
   border-width: 8px;
   border-style: solid;
 }
@@ -90,47 +90,47 @@ button {
 
 .dark-blue {
   background: #0A3463;
-  color: #f5cb9c;
+  color: white;
 }
 
 .medium-azure {
   background: #36AEBF;
-  color: #bf4736;
+  color: black;
 }
 
 .dark-turquoise {
   background: #008F9B;
-  color: #9b0b00;
+  color: black;
 }
 
 .bright-green {
   background: #4B9F4A;
-  color: #9e499f;
+  color: black;
 }
 
 .lime {
   background: #BBE90B;
-  color: #380ae9;
+  color: black;
 }
 
 .tan {
   background: #E4CD9E;
-  color: #1b3261;
+  color: black;
 }
 
 .bright-light-orange {
   background: #F8BB3D;
-  color: #3c79f8;
+  color: black;
 }
 
 .orange {
   background: #FE8A18;
-  color: #188cfe;
+  color: black;
 }
 
 .coral {
   background: #FF698F;
-  color: #68ffd9;
+  color: black;
 }
 
 .clear-cell {
