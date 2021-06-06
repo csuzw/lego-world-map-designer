@@ -85,6 +85,17 @@ $("#fill").click(function () {
     setCounters();
 });
 
+$("#download").click(function () {
+    html2canvas($("#canvas")[0]).then(function(canvas) {
+
+        let image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+        let link = document.createElement('a');
+        link.download = "lego-world-map.png";
+        link.href = image;
+        link.click();
+    });
+});
+
 function canChange(element) {
     let type = element.data("type");
     isLandLocked = $("#lock-land").is(":checked");
