@@ -83,12 +83,11 @@ function initEvents() {
     });
 
     $("#map-counter-toggle").click(function () {
-        $(".map-counter").attr("hidden", function (_, attr) {
-            return !attr;
-        });
         if ($(this).text() === "HIDE") {
             $(this).text("SHOW");
+            $(".map-counter").attr("hidden", true);
         } else {
+            $(".map-counter").removeAttr("hidden");
             $(this).text("HIDE");
         }
     });

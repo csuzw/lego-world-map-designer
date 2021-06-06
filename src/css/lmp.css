@@ -46,7 +46,7 @@ header {
     right: 16px;
 }
 
-#map-counters div {
+.map-counter {
     width: 96px;
     height: 48px;
     line-height: 48px;
@@ -85,7 +85,7 @@ button {
     color: black;
 }
 
-.map-counter-toggle {
+.map-counter-toggle-button {
     width: 96px;
     height: 24px;
     border-radius: 12px 12px 0px 0px;
