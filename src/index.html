@@ -1,43 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
 
         <title>Lego World Map Designer</title>
-        <meta name="description" content="Designer for Lego World Map (31203)">
-        <meta name="author" content="rjc">
+        <meta
+            name="description"
+            content="Designer for Lego World Map (31203)"
+        />
+        <meta name="author" content="rjc" />
+        <meta name="viewport" content="width=800, initial-scale=1" />
 
-        <link rel="stylesheet" href="css/lmp.css">
+        <link rel="stylesheet" href="css/lmp.css" />
     </head>
 
     <body>
-
         <header>
             <div id="map-controls">
-                <button id="white" class="color-button white">1</button>
-                <button id="dark-blue" class="color-button dark-blue">2</button>
-                <button id="medium-azure" class="color-button medium-azure">3</button>
-                <button id="dark-turquoise" class="color-button dark-turquoise">4</button>
-                <button id="bright-green" class="color-button bright-green">5</button>
-                <button id="lime" class="color-button lime">6</button>
-                <button id="tan" class="color-button tan">7</button>
-                <button id="bright-light-orange" class="color-button bright-light-orange">8</button>
-                <button id="orange" class="color-button orange">9</button>
-                <button id="coral" class="color-button coral">10</button>
-                <button id="clear-cell" class="color-button clear-cell"></button>
-                <button id="fill" class="action-button">FILL</button>
-                <button id="clear" class="action-button">RESET</button>
+                <button
+                    id="white"
+                    class="color-button white"
+                    aria-label="white"
+                >
+                    1
+                </button>
+                <button
+                    id="dark-blue"
+                    class="color-button dark-blue"
+                    aria-label="dark blue"
+                >
+                    2
+                </button>
+                <button
+                    id="medium-azure"
+                    class="color-button medium-azure"
+                    aria-label="medium azure"
+                >
+                    3
+                </button>
+                <button
+                    id="dark-turquoise"
+                    class="color-button dark-turquoise"
+                    aria-label="dark turquoise"
+                >
+                    4
+                </button>
+                <button
+                    id="bright-green"
+                    class="color-button bright-green"
+                    aria-label="bright green"
+                >
+                    5
+                </button>
+                <button id="lime" class="color-button lime" aria-label="lime">
+                    6
+                </button>
+                <button id="tan" class="color-button tan" aria-label="tan">
+                    7
+                </button>
+                <button
+                    id="bright-light-orange"
+                    class="color-button bright-light-orange"
+                    aria-label="bright light orange"
+                >
+                    8
+                </button>
+                <button
+                    id="orange"
+                    class="color-button orange"
+                    aria-label="orange"
+                >
+                    9
+                </button>
+                <button
+                    id="coral"
+                    class="color-button coral"
+                    aria-label="coral"
+                >
+                    10
+                </button>
+                <button
+                    id="clear-cell"
+                    class="color-button clear-cell"
+                    aria-label="black"
+                ></button>
+                <button
+                    id="fill"
+                    class="action-button"
+                    aria-label="fill with selected color"
+                >
+                    FILL
+                </button>
+                <button
+                    id="clear"
+                    class="action-button"
+                    aria-label="reset to default"
+                >
+                    RESET
+                </button>
                 <div id="lock">
                     <div id="lock-row-1">
-                        <label for="lock-land">LOCK LAND</label>
-                        <input id="lock-land" type="checkbox" checked>
+                        <label for="lock-land" aria-label="lock land cells"
+                            >LOCK LAND</label
+                        >
+                        <input id="lock-land" type="checkbox" checked />
                     </div>
                     <div id="lock-row-2">
-                        <label id="lock-water-label" for="lock-water">LOCK WATER</label>
-                        <input id="lock-water" type="checkbox">
-                    </div>    
+                        <label
+                            id="lock-water-label"
+                            for="lock-water"
+                            aria-label="lock water cells"
+                            >LOCK WATER</label
+                        >
+                        <input id="lock-water" type="checkbox" />
+                    </div>
                 </div>
-                <button id="download" class="action-button">DOWNLOAD</button>
+                <button
+                    id="download"
+                    class="action-button"
+                    aria-label="download world map image"
+                >
+                    DOWNLOAD
+                </button>
             </div>
 
             <select id="map-type" hidden>
@@ -63,11 +147,13 @@
                 <div class="coral" data-max="601"></div>
             </div>
         </main>
-        
-        <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+            integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+            crossorigin="anonymous"
+        ></script>
         <script src="js/html2canvas.min.js"></script>
         <script src="js/lmp.js"></script>
     </body>
 </html>
-
-

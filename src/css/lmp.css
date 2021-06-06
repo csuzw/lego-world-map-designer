@@ -1,227 +1,227 @@
 body {
-  margin: 0px;
-  font-family: sans-serif;
-  font-weight: bold;
-  font-size: large;
-  background: black;
+    margin: 0px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: large;
+    background: black;
 }
 
 header {
-  padding-top: 1px;
+    padding-top: 1px;
 }
 
 #canvas {
-  width: 1280px;
-  height: 800px;
-  margin: auto;
-  background-color: black;
-  border-color: lightgray;
-  border-width: 8px;
-  border-style: solid;
+    width: 1280px;
+    height: 800px;
+    margin: auto;
+    background-color: black;
+    border-color: lightgray;
+    border-width: 8px;
+    border-style: solid;
 }
 
 .cell {
-  float: left;
-  box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
-  width: 10px;
-  height: 10px;
-  background: black;
-  border-radius: 100%;
+    float: left;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 100%;
 }
 
 #map-type {
-  position: absolute;
-  top: 8px;
-  right: 16px;
+    position: absolute;
+    top: 8px;
+    right: 16px;
 }
 
 #map-counters {
-  width: 96px;
-  position: absolute;
-  top: 64px;
-  right: 16px;
+    width: 96px;
+    position: absolute;
+    top: 64px;
+    right: 16px;
 }
 
 #map-counters div {
-  width: 96px;
-  height: 48px;
-  line-height: 48px;
-  text-align: center;
-  vertical-align: middle;
+    width: 96px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    vertical-align: middle;
 }
 
 #map-controls {
-  display: grid;
-  grid-template-rows: 48px;
-  column-gap: 4px;
-  justify-content: center;
-  width: auto;
-  height: 48px;
-  margin: 8px auto;
+    display: grid;
+    grid-template-rows: 48px;
+    column-gap: 4px;
+    justify-content: center;
+    width: auto;
+    height: 48px;
+    margin: 8px auto;
 }
 
 button {
-  font-weight: bold;
-  font-size: large;
-  height: 48px;
-  padding: 0px;
-  box-sizing: border-box;
-  border-width: 2px;
-  border-color: white;
-  border-radius: 24px;
+    font-weight: bold;
+    font-size: large;
+    height: 48px;
+    padding: 0px;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 24px;
 }
 
 .color-button {
-  width: 48px;
+    width: 48px;
 }
 
 .action-button {
-  width: 128px;
-  background: white;
-  color: black;
+    width: 128px;
+    background: white;
+    color: black;
 }
 
 button:hover {
-  opacity: 80%;
+    opacity: 80%;
 }
 
 .selected {
-  border: 2px solid gold;
+    border: 2px solid gold;
 }
 
 .white {
-  background: white;
-  color: black;
+    background: white;
+    color: black;
 }
 
 .dark-blue {
-  background: #0A3463;
-  color: white;
+    background: #0a3463;
+    color: white;
 }
 
 .medium-azure {
-  background: #36AEBF;
-  color: black;
+    background: #36aebf;
+    color: black;
 }
 
 .dark-turquoise {
-  background: #008F9B;
-  color: black;
+    background: #008f9b;
+    color: black;
 }
 
 .bright-green {
-  background: #4B9F4A;
-  color: black;
+    background: #4b9f4a;
+    color: black;
 }
 
 .lime {
-  background: #BBE90B;
-  color: black;
+    background: #bbe90b;
+    color: black;
 }
 
 .tan {
-  background: #E4CD9E;
-  color: black;
+    background: #e4cd9e;
+    color: black;
 }
 
 .bright-light-orange {
-  background: #F8BB3D;
-  color: black;
+    background: #f8bb3d;
+    color: black;
 }
 
 .orange {
-  background: #FE8A18;
-  color: black;
+    background: #fe8a18;
+    color: black;
 }
 
 .coral {
-  background: #FF698F;
-  color: black;
+    background: #ff698f;
+    color: black;
 }
 
 .clear-cell {
-  background: black;
-  color: white;
+    background: black;
+    color: white;
 }
 
 #white {
-  grid-column-start: 1;
+    grid-column-start: 1;
 }
 
 #dark-blue {
-  grid-column-start: 2;
+    grid-column-start: 2;
 }
 
 #medium-azure {
-  grid-column-start: 3;
+    grid-column-start: 3;
 }
 
 #dark-turquoise {
-  grid-column-start: 4;
+    grid-column-start: 4;
 }
 
 #bright-green {
-  grid-column-start: 5;
+    grid-column-start: 5;
 }
 
 #lime {
-  grid-column-start: 6;
+    grid-column-start: 6;
 }
 
 #tan {
-  grid-column-start: 7;
+    grid-column-start: 7;
 }
 
 #bright-light-orange {
-  grid-column-start: 8;
+    grid-column-start: 8;
 }
 
 #orange {
-  grid-column-start: 9;
+    grid-column-start: 9;
 }
 
 #coral {
-  grid-column-start: 10;
+    grid-column-start: 10;
 }
 
 #clear-cell {
-  grid-column-start: 11;
+    grid-column-start: 11;
 }
 
 #fill {
-  grid-column-start: 12;
+    grid-column-start: 12;
 }
 
 #clear {
-  grid-column-start: 13;
+    grid-column-start: 13;
 }
 
 #lock {
-  grid-column-start: 14;
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-rows: 24px 24px;
-  color: white;
+    grid-column-start: 14;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 24px 24px;
+    color: white;
 }
 
 #download {
-  grid-column-start: 15;
+    grid-column-start: 15;
 }
 
 #lock-row-1 {
-  grid-row-start: 1;
+    grid-row-start: 1;
 }
 
 #lock-land {
-  float: right;
+    float: right;
 }
 
 #lock-row-2 {
-  grid-row-start: 2;
+    grid-row-start: 2;
 }
 
 #lock-water {
-  float: right;
+    float: right;
 }
