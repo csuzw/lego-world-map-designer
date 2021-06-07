@@ -83,7 +83,7 @@ function initEvents() {
     });
 
     $("#map-counter-toggle").click(function () {
-        if ($(this).text() === "HIDE") {
+        if ($(this).text().trim() === "HIDE") {
             $(this).text("SHOW");
             $(".map-counter").attr("hidden", true);
         } else {
